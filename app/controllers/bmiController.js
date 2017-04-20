@@ -17,8 +17,8 @@ const calculate = (req, res, next) => {
   .catch(next);
 };
 
-const serviceController = {
+const bmiController = {
   calculate
 };
 
-module.exports = serviceController;
+module.exports = bmiController;

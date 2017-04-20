@@ -1,7 +1,9 @@
 const express = require('express');
-const clientRouter = express.Router();
+const bmiRouter = express.Router();
 const bmiController = require('../../controllers/bmiController');
+const apiErrorHandler = require('../../middleware/apiErrorHandler');
 
-clientRouter.post('/', bmiController.calculate);
+bmiRouter.post('/', bmiController.calculate);
+bmiRouter.use(apiErrorHandler);
 
-module.exports = clientRouter;
+module.exports = bmiRouter;
