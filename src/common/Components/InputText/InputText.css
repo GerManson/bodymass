@@ -9,6 +9,7 @@
     width: 100%;
     color: #333;
     transition: all 0.2s ease-in-out;
+    font-family: inherit;
 }
 
 .input:focus {

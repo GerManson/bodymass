@@ -5,12 +5,13 @@
 }
 
 .leftColumn {
-    flex: 1;
+    flex: 2;
 }
 
 .rightColumn {
-    flex: 2;
+    flex: 1;
     padding-left: 50px;
+    text-align: center;
 }
 
 .lead {

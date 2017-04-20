@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: 'Asar', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     min-height: 100%;
     font-size: 18px;
@@ -38,4 +38,8 @@ hr {
 
 h1 {
     color: #212121;
+}
+
+h2 {
+    color: #7b7e8e;
 }

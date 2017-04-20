@@ -35,19 +35,11 @@ export default class BodyMass extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.leftColumn}>
-          <Progress />
-          <h2>Obeso</h2>
-          <p className={styles.lead}>
-            Obesidad.
-          </p>
-        </div>
-        <div className={styles.rightColumn}>
           <h1>Calcula tu Índice de Masa Corporal - BMI</h1>
           <p className={styles.lead}>
-            Llena los campos de abajo y presiona el boton "Generar BMI" para saber tu masa corporal.
+            Llena los campos de abajo y presiona el boton "Calcular BMI" para saber tu masa corporal.
           </p>
           <hr />
-
           <form onSubmit={this.submitLogin} className={styles.form}>
             <div className={styles.formRow}>
               <FormGroup className={styles.formGroup}>
@@ -59,17 +51,22 @@ export default class BodyMass extends Component {
                 <InputText name='height' placeholder='Metros' onChange={this.handleInputChange} />
               </FormGroup>
             </div>
-
             <div className={styles.formAction}>
-              <Button buttonType='primary'>
-                Generar BMI
+              <Button buttonType='orange'>
+                Calcular BMI
               </Button>
               <div>
                 {this.renderAlert()}
               </div>
             </div>
           </form>
-
+        </div>
+        <div className={styles.rightColumn}>
+          <h2>25 BMI - Obeso</h2>
+          <p className={styles.lead}>
+            Obesidad.
+          </p>
+          <Progress />
         </div>
       </div>
     );
