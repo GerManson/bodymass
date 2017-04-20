@@ -8,7 +8,7 @@ export default class Progress extends Component {
       <div className={styles.container}>
         <Circle {...this.props} strokeWidth='10' strokeColor='#ff7575' />
         <div className={styles.percentage}>
-          {this.props.percent} BMI
+          {this.props.bmi} BMI
         </div>
       </div>
     );

@@ -10,6 +10,7 @@ export default class BodyMass extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.renderAlert = this.renderAlert.bind(this);
     this.submitBodyMass = this.submitBodyMass.bind(this);
+    this.percentage = this.percentage.bind(this);
   }
   submitBodyMass (event) {
     event.preventDefault();
@@ -34,20 +35,27 @@ export default class BodyMass extends Component {
   }
   renderResult () {
     if (this.props.bmi) {
+      let percent = this.percentage(this.props.bmi.bmi);
       return (
         <div>
           <h2>{this.props.bmi.bmi} BMI - {this.props.bmi.category}</h2>
-          <Progress percent={this.props.bmi.bmi} />
+          <Progress bmi={this.props.bmi.bmi} percent={percent} />
         </div>
       );
     } else {
       return (
         <div>
           <h2>Resultado</h2>
-          <Progress percent='0' />
+          <Progress bmi='0' percent='0' />
         </div>
       );
     }
+  }
+  percentage (bmi) { // Calculates percentage if 100% is 40 BMI.
+    let percentage = 0;
+    percentage = Math.round((bmi * 100) / 40);
+    if (percentage > 100) percentage = 100;
+    return percentage;
   }
   render () {
     return (

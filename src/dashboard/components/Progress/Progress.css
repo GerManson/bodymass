@@ -11,3 +11,9 @@
     font-weight: 100;
     color: #ff7575;
 }
+
+@media (max-width: 1024px) {
+    .percentage {
+        display: none;
+    }
+}
