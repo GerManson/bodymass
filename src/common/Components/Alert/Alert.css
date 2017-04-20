@@ -1,0 +1,25 @@
+.container {
+    padding: 0px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.danger {
+    color: #f33a4a;
+}
+
+.danger:before {
+    font-family: "FontAwesome";
+    font-weight: lighter;
+    content: "\f05c "
+}
+
+.info {
+    background-color: #cef;
+    color: #616677;
+}
+
+.success {
+    background-color: #ced;
+    color: #616677;
+}

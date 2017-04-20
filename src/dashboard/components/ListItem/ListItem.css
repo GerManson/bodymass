@@ -1,0 +1,14 @@
+.listItem {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+
+.listItem a {
+  text-decoration: none;
+}
+
+.listItem img {
+  height: 50px;
+}

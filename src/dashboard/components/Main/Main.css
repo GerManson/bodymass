@@ -1,0 +1,37 @@
+html,
+body {
+    font-family: 'Asar', sans-serif;
+    box-sizing: border-box;
+    min-height: 100%;
+    font-size: 18px;
+    background: #191a21;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.dashboard {
+    padding: 30px 0;
+}
+
+.mainContent {
+    padding: 40px 40px;
+    background-color: #FFF;
+    color: #7b7e8e;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid #e4e4e4;
+    margin: 10px auto;
+}

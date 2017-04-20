@@ -1,0 +1,57 @@
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.overlay {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  min-width: 200px;
+  transition: all 0.2s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  z-index: 99999;
+}
+
+.bottomRight {
+  top: calc(100% + 5px);
+  right: 0;
+}
+
+.bottomLeft {
+  top: calc(100% + 5px);
+  left: 0;
+}
+
+.topRight {
+  bottom: calc(100% + 5px);
+  right: 0;
+}
+
+.topLeft {
+  bottom: calc(100% + 5px);
+  left: 0;
+}
+
+.dismiss {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.overlay.open {
+  transform: scaleX(1);
+  opacity: 1;
+}
