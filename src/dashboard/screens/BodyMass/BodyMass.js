@@ -6,11 +6,7 @@ import Progress from '../../components/Progress/Progress';
 export default class BodyMass extends Component {
   constructor (props) {
     super(props);
-    let bmi = {
-      bmi: 0,
-      category: ''
-    };
-    this.state = { bmi, mass: '', height: '' };
+    this.state = { mass: '', height: '' };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.renderAlert = this.renderAlert.bind(this);
     this.submitBodyMass = this.submitBodyMass.bind(this);
@@ -35,6 +31,23 @@ export default class BodyMass extends Component {
       );
     }
     return null;
+  }
+  renderResult () {
+    if (this.props.bmi) {
+      return (
+        <div>
+          <h2>{this.props.bmi.bmi} BMI - {this.props.bmi.category}</h2>
+          <Progress percent={this.props.bmi.bmi} />
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h2>Resultado</h2>
+          <Progress percent='0' />
+        </div>
+      );
+    }
   }
   render () {
     return (
@@ -65,11 +78,7 @@ export default class BodyMass extends Component {
           </form>
         </div>
         <div className={styles.rightColumn}>
-          <h2>{this.props.bmi.bmi} BMI - {this.props.bmi.category}</h2>
-          <p className={styles.lead}>
-            Obesidad.
-          </p>
-          <Progress />
+          {this.renderResult()}
         </div>
       </div>
     );

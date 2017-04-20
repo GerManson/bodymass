@@ -6,11 +6,15 @@ export default class Progress extends Component {
   render () {
     return (
       <div className={styles.container}>
-        <Circle percent='50' strokeWidth='10' strokeColor='#ff7575' />
+        <Circle {...this.props} strokeWidth='10' strokeColor='#ff7575' />
         <div className={styles.percentage}>
-          50 BMI
+          {this.props.percent} BMI
         </div>
       </div>
     );
   }
 }
+
+Progress.defaultProps = {
+  percent: 0
+};
