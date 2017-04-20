@@ -15,8 +15,8 @@ export default class Api {
   logout () {
     return _GET('/auth/logout');
   }
-  calculateBMI (query) {
-    return _POST('/api/bmi', query);
+  calculateBMI (mass, height) {
+    return _POST('/api/bmi', {mass, height});
   }
 }
 
