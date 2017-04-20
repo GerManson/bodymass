@@ -6,6 +6,7 @@
     border: none;
     text-decoration: none;
     min-width: 120px;
+    font-family: inherit;
 }
 
 .base a {
@@ -34,6 +35,11 @@
     color: white;
     background: #307bbf;
     transition: 0.2s ease-in-out all;
+}
+
+.orange {
+    color: white;
+    background-color: #ff7575;
 }
 
 .block {

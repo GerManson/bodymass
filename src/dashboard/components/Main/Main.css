@@ -1,6 +1,6 @@
 html,
 body {
-    font-family: 'Asar', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     min-height: 100%;
     font-size: 18px;
@@ -24,7 +24,7 @@ body {
 .mainContent {
     padding: 40px 40px;
     background-color: #FFF;
-    color: #7b7e8e;
+    color: #333;
     border-radius: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -32,6 +32,14 @@ body {
 
 hr {
     border: 0;
-    border-top: 3px solid #e4e4e4;
+    border-top: 1px solid #999999;
     margin: 10px auto;
+}
+
+h1 {
+    color: #212121;
+}
+
+h2 {
+    color: #7b7e8e;
 }

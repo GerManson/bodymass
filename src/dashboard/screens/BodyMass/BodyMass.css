@@ -1,51 +1,52 @@
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     min-width: 0;
 }
 
-.toolbar {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-bottom: 20px;
+.leftColumn {
+    flex: 2;
 }
 
-.noCustomers {
-    margin-top: 60px;
+.rightColumn {
+    flex: 1;
+    padding-left: 50px;
     text-align: center;
 }
 
-.newCustomer {
-    margin-top: 20px;
+.lead {
+    margin-top: -10px;
+    color: #7b7e8e;
 }
 
-.customersIcon img {
-    width: 250px;
+.form {
+    margin-top: 30px;
+    background-color: #ebebeb;
+    padding: 20px;
+    border-radius: 4px;
 }
 
-.link {
+.formRow {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.formGroup {
     flex: 1;
+    margin: 0 12px;
 }
 
-.name {
-    padding: 0 10px;
-    color: #666;
+.formAction {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
-.subscriptions {
-    color: #888;
-    padding: 0 10px;
+.formAction button {
+    margin: 0 10px;
 }
 
-.addButton {
-    border: 2px solid #309edf;
-    padding: 8px 10px;
-    font-weight: 600;
-    margin-left: 20px;
-}
-
-.addButton i {
-    padding: 0 5px;
+.errorBox {
+    font-size: .8em;
 }

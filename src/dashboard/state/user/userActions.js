@@ -25,7 +25,6 @@ export const logoutSuccess = () => {
   };
 };
 
-
 export const authFail = (error) => {
   return {
     type: actionTypes.AUTH_FAIL,

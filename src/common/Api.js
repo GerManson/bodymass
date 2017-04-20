@@ -9,53 +9,21 @@ export default class Api {
   me () {
     return _GET('/auth');
   }
-  recover (email) {
-    return _POST('/auth/recover', { email });
-  }
   signup (name, email, password, confirm) {
     return _POST('/auth/users', {name, email, password, confirm});
-  }
-  listClients (query) {
-    return _GET('/api/clients', query);
-  }
-  createClient (legalName, firstName, lastName, phone, taxId, address, email) {
-    return _POST('/api/clients', {
-      legal_name: legalName,
-      first_name: firstName,
-      last_name: lastName,
-      phone,
-      tax_id: taxId,
-      address,
-      email
-    });
-  }
-  listSubscriptions (query) {
-    return _GET('/api/subscriptions', query);
-  }
-  listProviders () {
-    return _GET('/api/providers');
-  }
-  listServices (query) {
-    return _GET('/api/services', query);
-  }
-  listPlans (query) {
-    return _GET('/api/plans', query);
   }
   logout () {
     return _GET('/auth/logout');
   }
-  getClientDetail (clientId) {
-    return _GET(`/api/clients/${clientId}`);
-  }
-  getSubscriptionDetail (subscriptionId) {
-    return _GET(`/api/subscriptions/${subscriptionId}`);
+  calculateBMI (mass, height) {
+    return _POST('/api/bmi', {mass, height});
   }
 }
 
 function _GET (route, query) { return _fetch(route, 'GET', query, true); }
 function _POST (route, body) { return _fetch(route, 'POST', body); }
-function _PUT (route, body) { return _fetch(route, 'PUT', body); }
-function _DELETE (route, query) { return _fetch(route, 'DELETE', query, true); }
+// function _PUT (route, body) { return _fetch(route, 'PUT', body); }
+// function _DELETE (route, query) { return _fetch(route, 'DELETE', query, true); }
 
 function _fullRoute (url) {
   return `${BASE_URL}${url}`;
