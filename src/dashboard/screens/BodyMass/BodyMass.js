@@ -69,11 +69,11 @@ export default class BodyMass extends Component {
                 <InputText name='height' placeholder='Metros' onChange={this.handleInputChange} />
               </FormGroup>
             </div>
-            {this.renderAlert()}
             <div className={styles.formAction}>
               <Button buttonType='orange'>
                 Calcular BMI
               </Button>
+              {this.renderAlert()}
             </div>
           </form>
         </div>
