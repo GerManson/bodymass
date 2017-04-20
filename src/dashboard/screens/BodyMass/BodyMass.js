@@ -19,6 +19,7 @@ export default class BodyMass extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
+    console.log(this.state);
   }
   renderAlert () {
     if (this.props.error) {
@@ -35,29 +36,27 @@ export default class BodyMass extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.leftColumn}>
-          <h1>Calcula tu Índice de Masa Corporal - BMI</h1>
+          <h1>Calcula tu Índice de Masa Corporal</h1>
           <p className={styles.lead}>
             Llena los campos de abajo y presiona el boton "Calcular BMI" para saber tu masa corporal.
           </p>
           <hr />
-          <form onSubmit={this.submitLogin} className={styles.form}>
+          <form onSubmit={this.submitBodyMass} className={styles.form}>
             <div className={styles.formRow}>
               <FormGroup className={styles.formGroup}>
-                <label>Peso <small>(Kg</small></label>
+                <label>Peso <small>(Kg)</small></label>
                 <InputText name='mass' placeholder='Kg' onChange={this.handleInputChange} />
               </FormGroup>
               <FormGroup className={styles.formGroup}>
-                <label>Estatura <small>(Mts</small></label>
+                <label>Estatura <small>(Mts)</small></label>
                 <InputText name='height' placeholder='Metros' onChange={this.handleInputChange} />
               </FormGroup>
             </div>
+            {this.renderAlert()}
             <div className={styles.formAction}>
               <Button buttonType='orange'>
                 Calcular BMI
               </Button>
-              <div>
-                {this.renderAlert()}
-              </div>
             </div>
           </form>
         </div>

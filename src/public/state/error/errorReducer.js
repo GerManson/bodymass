@@ -6,7 +6,6 @@ const errorReducer = (currState = null, action) => {
     case actionTypes.SIGNUP_SUCCESS:
       return null;
     case actionTypes.LOGIN_FAIL:
-    case actionTypes.RECOVER_FAIL:
     case actionTypes.SIGNUP_FAIL:
       return action.error.message;
     default:

@@ -27,6 +27,15 @@ export function * logout () {
   }
 }
 
+export function * getBodyMassIndex ({mass, height}) {
+  try {
+    const bmi = yield call(api.calculateBMI, mass, height);
+    yield put(userActions.bodyMassSuccess(bmi));
+  } catch (err) {
+    yield put(userActions.bodyMassFail(err));
+  }
+}
+
 // Watchers
 export function * watchAuth () {
   yield takeLatest(actionTypes.AUTH_REQUEST, auth);
@@ -36,9 +45,14 @@ export function * watchLogout () {
   yield takeLatest(actionTypes.LOGOUT_REQUEST, logout);
 }
 
+export function * watchBodyMassRequest () {
+  yield takeLatest(actionTypes.BMI_REQUEST, getBodyMassIndex);
+}
+
 export default function * () {
   yield [
     fork(watchAuth),
-    fork(watchLogout)
+    fork(watchLogout),
+    fork(watchBodyMassRequest)
   ];
 }

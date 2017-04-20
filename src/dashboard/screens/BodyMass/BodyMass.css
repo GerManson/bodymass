@@ -46,3 +46,7 @@
 .formAction button {
     margin: 0 10px;
 }
+
+.errorBox {
+    font-size: .8em;
+}
