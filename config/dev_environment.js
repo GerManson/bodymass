@@ -1,6 +1,6 @@
 const secret = require('./secret');
 
-process.env.MONGO_DB_URL = 'mongodb://ds111791.mlab.com:11791/heroku_3m3zlt9x';
+process.env.MONGO_DB_URL = 'mongodb://localhost/bodymass';
 process.env.JWT_SECRET = '4ebd0208-8328-5d69-8c44-ec50939c0967';
 process.env.JWT_ISSUER = 'BodyMass';
 process.env.IP = 'localhost';
