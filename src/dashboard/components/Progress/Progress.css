@@ -1,0 +1,13 @@
+.container {
+    width: 100xp;
+    position: relative;
+}
+
+.percentage {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    font-size: 4em;
+    font-weight: 100;
+    color: #ff7575;
+}
