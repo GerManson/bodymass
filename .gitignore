@@ -1,0 +1,7 @@
+build
+node_modules
+npm-debug.log
+.npm
+config/secret.*
+.DS_Store
+.vscode
