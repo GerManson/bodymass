@@ -1,0 +1,35 @@
+html,
+body {
+    font-family: 'Asar', sans-serif;
+    box-sizing: border-box;
+    min-height: 100%;
+    font-size: 18px;
+    background: #191a21;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:global(#root) {
+    height: 100%;
+    display: flex;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    background-color: #191a21;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+h2 {
+    color: #333;
+    font-size: 2em;
+    font-weight: 100;
+}
+
+a {
+    color: #333;
+}

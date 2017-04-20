@@ -1,0 +1,40 @@
+.userMenu {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.userMenu:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.userMenu h3 {
+    color: #666;
+    margin: 0 8px;
+    font-size: 14px;
+}
+
+.userMenu i {
+    color: #888;
+    font-size: 22px;
+}
+
+.link {
+    padding: 8px 12px;
+    color: #666;
+    display: block;
+    margin: 0 -10px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: rgba(51, 187, 187, 0.2);
+}
+
+.container img {
+    height: 30px;
+}

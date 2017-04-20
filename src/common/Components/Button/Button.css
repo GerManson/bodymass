@@ -1,0 +1,48 @@
+.base {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    text-decoration: none;
+    min-width: 120px;
+}
+
+.base a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.base:hover {
+    cursor: pointer;
+}
+
+.base:focus {
+    outline: none;
+}
+
+.base i {
+    padding: 0 0 0 10px;
+}
+
+.default {
+    color: #FFF;
+    background-color: #bebebe;
+}
+
+.primary {
+    color: white;
+    background: #307bbf;
+    transition: 0.2s ease-in-out all;
+}
+
+.block {
+    display: block;
+    width: 100%;
+}
+
+.outline {
+    color: #008aff;
+    border: 2px solid #008aff;
+    display: inline-block;
+}
